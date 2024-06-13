@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Captioning Result</title>
+</head>
+<body>
+    <h1>Image Captioning Result</h1>
+    <img src="{{ image_url }}" alt="Uploaded Image" width="500">
+    <p>Caption: {{ caption }}</p>
+    <audio controls autoplay>
+        <source src="{{ url_for('uploaded_file', filename='caption.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <br>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>
